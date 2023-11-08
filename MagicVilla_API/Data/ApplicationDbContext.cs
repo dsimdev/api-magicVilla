@@ -5,14 +5,12 @@ namespace MagicVilla_API.Data
 {
     public class ApplicationDbContext : DbContext
     {
-
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
         }
 
         public DbSet<Villa> Villas { get; set; }
+        public DbSet<NumeroVilla> NumeroVillas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -45,6 +43,5 @@ namespace MagicVilla_API.Data
                 }
             );
         }
-
     }
 }
